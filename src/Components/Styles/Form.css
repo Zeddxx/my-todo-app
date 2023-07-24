@@ -1,0 +1,89 @@
+.todo-input-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .error-message {
+    color: #fff;
+    margin-top: 1rem;
+  }
+  .error-message.moon-mode {
+    color: #fff;
+  }
+  .check-box {
+    height: 1.4rem;
+    width: 1.4rem;
+    cursor: pointer;
+    /* border: 1px solid var( --very-dark-grayish-blue-dark); */
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    left: 1.5rem;
+    top: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    /* background: var(--check-background); */
+    border: 1px solid var(--very-dark-grayish-blue);
+  }
+  
+  .list-check-box img {
+    opacity: 0;
+  }
+  .list-check-box.correct {
+    background: url("/src/Assets/images/icon-check.svg") no-repeat center,
+      var(--check-background);
+    z-index: 4;
+  }
+  .list-check-box:focus.correct {
+    background: url("/src/Assets/images/icon-check.svg") no-repeat center,
+      var(--check-background);
+    z-index: 4;
+  }
+  .list-check-box:hover.correct {
+    z-index: 5;
+  }
+  .todo-input {
+    background: var(--very-dark-desaturated-blue);
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.1rem;
+    padding: 2rem 0rem 2rem 3.6rem;
+    border-radius: 0.4rem;
+    color: var(--very-light-grayish-blue);
+    /* margin-top: 2rem; */
+  
+    caret-color: var(--bright-blue);
+    caret-shape: block;
+  }
+  .todo-input.moon-mode {
+    background: var(--very-light-gray);
+    color: var(--very-dark-grayish-blue);
+  }
+  
+  @media (width <= 560px) {
+    .todo-input-div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 0 1.3rem;
+    }
+    .todo-input {
+      /* width: 350px; */
+      /* box-sizing: border-box; */
+      padding: 1.8rem 3.4rem;
+    }
+    .check-box {
+      left: 3.2rem;
+      position: absolute;
+    }
+    .todo-head-btn {
+      padding: 0 1.3rem;
+    }
+  }
+  
